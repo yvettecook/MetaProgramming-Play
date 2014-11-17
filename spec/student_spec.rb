@@ -13,4 +13,13 @@ describe Student do
     expect(student).to have_unixoid
   end
 
+  it 'can read the awesome attribute' do
+    expect(student.awesome?).to eq(true)
+  end
+
+  it 'can write the awesome attribute' do
+    student.awesome=(false)
+    expect(student.awesome?).to eq(false)
+  end
+
 end
