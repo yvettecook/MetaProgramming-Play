@@ -3,12 +3,12 @@
 
 #### Challenge:
 
--[x] Use `method_missing` to redefine how an object reacts when asked `has_unknown_attribute`.
--[x] Use `define_method` to create a boolean version of Ruby's inbuilt `attr_accessor` method.
+- [x] Use `method_missing` to redefine how an object reacts when asked `has_unknown_attribute`.
+- [x] Use `define_method` to create a boolean version of Ruby's inbuilt `attr_accessor` method.
 
 #### Code Snippets:
 
-Refactored `define_method`
+attr_accessor method using `define_method`
 
 ```ruby
 def self.attr_accessor?(attr)
