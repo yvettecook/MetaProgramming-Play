@@ -13,12 +13,18 @@ describe Student do
     expect(student).to have_unixoid
   end
 
+  it "one students badge doesn't affect other student's badges" do
+    bob = Student.new
+    student.award :unixoid
+    expect(bob).not_to have_unixoid
+  end
+
   it 'can read the awesome attribute' do
     expect(student.awesome?).to eq(true)
   end
 
   it 'can write the awesome attribute' do
-    student.awesome=(false)
+    student.awesome= false
     expect(student.awesome?).to eq(false)
   end
 
